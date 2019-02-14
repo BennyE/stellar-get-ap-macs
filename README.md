@@ -1,5 +1,9 @@
-# stellar-get-ap-macs
-Quick tool to get a list of Stellar AP MAC addresses from OmniVista 2500
+# Stellar Get-AP-MACs
+Quick tool to get a list of Stellar Wireless Access Point MAC addresses from OmniVista 2500.
+
+# Dependencies
+- requests (Thanks to Kenneth Reitz - http://www.python-requests.org/)
+- Python 3.x
 
 # Example
 ```
