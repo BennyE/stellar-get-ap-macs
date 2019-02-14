@@ -1,0 +1,6 @@
+{
+        "ov_hostname": "omnivista.example.com",
+        "ov_username": "admin",
+        "ov_password": "switch",
+        "validate_https_certificate": "yes"
+}
