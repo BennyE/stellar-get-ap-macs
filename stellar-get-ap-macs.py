@@ -21,7 +21,6 @@ except ImportError as ie:
 import json
 import random
 import urllib3
-import uuid
 
 #
 # Functions
@@ -40,19 +39,6 @@ try:
         ov_username = settings["ov_username"]
         ov_password = settings["ov_password"]
         validate_https_certificate = settings["validate_https_certificate"]
-        #ap_groups = settings["ap_groups"]
-        #ssid = settings["ssid"]
-        #encr = settings["encryption"]
-        #psk_length = settings["psk_length"]
-        #send_psk_via_mail = settings["send_psk_via_mail"]
-        #email_from = settings["email_from"]
-        #smtp_server = settings["smtp_server"]
-        #smtp_auth = settings["smtp_auth"]
-        #smtp_user = settings["smtp_user"]
-        #smtp_port = settings["smtp_port"]
-        #smtp_password = settings["smtp_password"]
-        #language = settings["language"]
-        #email_to = settings["email_to"]
 except IOError as ioe:
     print(ioe)
     sys.exit("ERROR: Couldn't find/open settings.json file!")
@@ -73,7 +59,6 @@ if "https://" in ov_hostname:
 if "/" in ov_hostname:
     print("[!] Found \"/\" in hostname, removing it!")
     ov_hostname = ov_hostname.strip("/")
-
 
 # Figure out if HTTPS certificates should be validated
 # That should actually be the default, so we'll warn if disabled.
